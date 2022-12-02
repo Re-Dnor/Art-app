@@ -11,3 +11,14 @@ export type HomeProps = {
 export type CardsProps = {
   list: CardsType[];
 };
+
+export type PaginationProps = {
+  page: number;
+  handleChange: (event: React.ChangeEvent<unknown>, value: number) => void;
+};
+
+export type ParamsType = {
+  params: {
+    countPage: string;
+  };
+};

@@ -1,4 +1,5 @@
 import { Container, Typography, Card, Grid, Button, CardActions, CardContent, CardMedia } from "@mui/material";
+import Link from "next/link";
 
 import { CardsProps } from "../../types/data.type";
 
@@ -34,7 +35,9 @@ function Cards({ list }: CardsProps) {
                 <Typography>Author is {card.artist_title}</Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">View</Button>
+                <Button size="small">
+                  <Link href={`/arts/${card.image_id}`}>Full screen</Link>
+                </Button>
                 <Button size="small">Edit</Button>
               </CardActions>
             </Card>
